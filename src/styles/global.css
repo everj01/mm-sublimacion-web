@@ -1,0 +1,133 @@
+/* ============================================================
+   MM Sublimados — Sistema de diseño
+   Estética: scrapbook editorial / taller artesanal
+   Paleta tomada del logo: rojo vino + celeste sobre papel crema
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Caveat:wght@500;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colores de marca */
+  --rojo:       #A8132B;
+  --rojo-osc:   #780C1D;
+  --azul:       #2E9BD4;
+  --azul-osc:   #1A6F9E;
+  --crema:      #F4EBDA;
+  --crema-soft: #FBF6EC;
+  --papel:      #FFFDF8;
+  --tinta:      #1E1814;
+  --tinta-soft: #4a4038;
+
+  /* Cintas / acentos translúcidos */
+  --cinta-rojo: rgba(168, 19, 43, 0.16);
+  --cinta-azul: rgba(46, 155, 212, 0.20);
+
+  /* Tipografía */
+  --display: 'Fraunces', Georgia, serif;
+  --mano:    'Caveat', cursive;
+  --cuerpo:  'Hanken Grotesk', -apple-system, sans-serif;
+
+  /* Sombra recortada (estilo sticker / pin) */
+  --sombra-card: 6px 7px 0 rgba(30, 24, 20, 0.85);
+  --sombra-suave: 0 18px 40px -22px rgba(30, 24, 20, 0.5);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--cuerpo);
+  color: var(--tinta);
+  background-color: var(--crema);
+  /* Textura de papel: cuadrícula de puntos + grano sutil */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(30,24,20,0.07) 1px, transparent 0);
+  background-size: 22px 22px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Grano sobre todo el documento */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Tipografía base ---------- */
+h1, h2, h3 { font-family: var(--display); line-height: 0.98; font-weight: 900; letter-spacing: -0.02em; }
+
+.mano { font-family: var(--mano); font-weight: 700; }
+
+/* Marcador resaltador (como en las cajas reales) */
+.marca-azul, .marca-rojo {
+  position: relative;
+  display: inline;
+  padding: 0 0.1em;
+}
+.marca-azul::before, .marca-rojo::before {
+  content: "";
+  position: absolute;
+  left: -0.05em; right: -0.05em;
+  top: 18%; bottom: 14%;
+  z-index: -1;
+  transform: rotate(-1.2deg);
+  border-radius: 4px 10px 6px 12px;
+}
+.marca-azul::before { background: var(--cinta-azul); }
+.marca-rojo::before { background: var(--cinta-rojo); }
+
+/* ---------- Contenedor ---------- */
+.wrap { width: min(1180px, 92vw); margin-inline: auto; }
+
+/* ---------- Cinta washi (decoración) ---------- */
+.tape {
+  position: absolute;
+  width: 120px; height: 30px;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,.35) 0 6px, transparent 6px 12px), var(--cinta-azul);
+  border-left: 1px dashed rgba(255,255,255,.5);
+  border-right: 1px dashed rgba(255,255,255,.5);
+  opacity: 0.9;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.55em;
+  font-family: var(--cuerpo); font-weight: 700; font-size: 1rem;
+  padding: 0.85em 1.4em;
+  border: 2.5px solid var(--tinta);
+  background: var(--rojo); color: var(--papel);
+  border-radius: 2px;
+  box-shadow: 4px 4px 0 var(--tinta);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .2s ease;
+}
+.btn:hover { transform: translate(-2px,-2px); box-shadow: 7px 7px 0 var(--tinta); }
+.btn:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--tinta); }
+.btn--azul { background: var(--azul); }
+.btn--ghost { background: var(--papel); color: var(--tinta); }
+
+/* ---------- Animación de entrada ----------
+   Por defecto TODO es visible (funciona aunque el JS falle).
+   Solo si hay JS (html.js) ocultamos y animamos al entrar en pantalla. */
+.reveal { opacity: 1; }
+html.js .reveal { opacity: 0; transform: translateY(26px); }
+html.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto; }
+  html.js .reveal { opacity: 1; transform: none; }
+}
