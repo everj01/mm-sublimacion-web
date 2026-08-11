@@ -2,26 +2,26 @@
   "_lee_esto_primero": "Este es el ÚNICO archivo que necesitas editar para cambiar el contenido de la página. No toques el código. Las rutas de imágenes empiezan en /productos/ (esa carpeta está en /public). Para subir una foto nueva: ponla en public/productos/ y escribe aquí su nombre, ej: /productos/mi-foto.jpg",
 
   "marca": {
-    "nombre": "MM",
-    "nombreCompleto": "MM Sublimados",
-    "lema": "Tazas, cuadernos y llaveros que cuentan tu historia",
-    "frase": "Sublimación artesanal hecha a mano. Personaliza lo que quieras: un nombre, una foto, una frase que solo ustedes dos entienden.",
+    "nombre": "M&M",
+    "nombreCompleto": "M&M Sublimados",
+    "lema": "Tazas, agendas y llaveros que cuentan tu historia", 
+    "frase": "Sublimación personalizada a tu gusto, lo que quieras: nombres, fotos, frases y mucho más. Tú eliges, nosotros lo hacemos realidad.",
     "ubicacion": "Hecho a pedido · Personalizados",
     "logo": "/logo.png"
   },
 
   "contacto": {
-    "whatsapp": "51969024713",
-    "whatsappMensaje": "¡Hola MM! Vi su página y quiero pedir un producto personalizado 🤍",
-    "correo": "ev.montero@mmsublimados.com",
-    "telefonoVisible": "+51 969 024 713",
+    "whatsapp": "51922717580",
+    "whatsappMensaje": "¡Hola! Vi su página y quiero pedir un producto personalizado 🤍",
+    "correo": "in.subl10@gmail.com",
+    "telefonoVisible": "+51 922 717 580",
     "horario": "Lun a Sáb · 9:00 a 19:00"
   },
 
   "redes": {
-    "instagram": "https://instagram.com/mmsublimados",
-    "tiktok": "https://tiktok.com/@mmsublimados",
-    "facebook": "https://facebook.com/mmsublimados"
+    "instagram": "https://instagram.com/",
+    "tiktok": "https://tiktok.com/@mm.sublimacin1",
+    "facebook": "https://facebook.com/"
   },
 
   "categorias": [
@@ -29,12 +29,12 @@
       "id": "tazas",
       "titulo": "Tazas",
       "etiqueta": "lo nuestro",
-      "descripcion": "Cerámica de primera, sublimada a alta temperatura. El diseño no se cae ni se borra con el lavado. Mágicas, interior de color, con foto o con frase.",
+      "descripcion": "Sublimada a alta temperatura. El diseño no se cae ni se borra con el lavado. Mágica , con foto o con frase.",
       "color": "rojo"
     },
     {
-      "id": "cuadernos",
-      "titulo": "Cuadernos",
+      "id": "agendas",
+      "titulo": "Agendas",
       "etiqueta": "para escribir bonito",
       "descripcion": "Anillados con portada dura personalizada. Para la profe, para el ingeniero, para la pastora o para ti. Le ponemos nombre, fecha y dedicatoria.",
       "color": "azul"
@@ -43,7 +43,7 @@
       "id": "llaveros",
       "titulo": "Llaveros",
       "etiqueta": "que se lleven contigo",
-      "descripcion": "Acrílicos, de foto o temáticos. Desde la tabla periódica de bolsillo hasta el detalle de promoción para todo el salón.",
+      "descripcion": "Enmicados, desde la tabla periódica de bolsillo hasta el detalle de promoción para todo el salón.",
       "color": "rojo"
     }
   ],
@@ -53,7 +53,7 @@
       "titulo": "Box maestra · Miss Thali",
       "categoria": "tazas",
       "etiqueta": "Más vendido",
-      "descripcion": "Taza + cuaderno arcoíris con dedicatoria y caja sorpresa rotulada.",
+      "descripcion": "Taza + agenda arcoíris con dedicatoria y caja sorpresa rotulada.",
       "imagen": "/productos/caja-maestra-thali.jpg",
       "destacado": true
     },
@@ -61,23 +61,23 @@
       "titulo": "Set ingeniero civil · Martín",
       "categoria": "tazas",
       "etiqueta": "Cumpleaños",
-      "descripcion": "Taza, tomatodo y cuaderno temáticos + golosinas y globos. Caja completa.",
+      "descripcion": "Taza, tomatodo y agenda temáticos + golosinas y globos. Caja completa.",
       "imagen": "/productos/caja-ingeniero-martin.jpg",
       "destacado": true
     },
     {
       "titulo": "Box pastora · Eleane",
-      "categoria": "cuadernos",
+      "categoria": "agendas",
       "etiqueta": "Floral",
-      "descripcion": "Cuaderno y taza a juego con diseño de mariposas y arcoíris. Elegante.",
+      "descripcion": "Agenda y taza a juego con diseño de mariposas y arcoíris. Elegante.",
       "imagen": "/productos/caja-pastora-eleane.jpg",
       "destacado": true
     },
     {
       "titulo": "Box seño · Sheila",
-      "categoria": "cuadernos",
+      "categoria": "agendas",
       "etiqueta": "Día del maestro",
-      "descripcion": "Cuaderno + taza con caricatura personalizada y caja con mensaje.",
+      "descripcion": "Agenda + taza con caricatura personalizada y caja con mensaje.",
       "imagen": "/productos/caja-seno-sheila.jpg",
       "destacado": false
     },
@@ -85,7 +85,7 @@
       "titulo": "Box inicial · Lucas Rafael",
       "categoria": "tazas",
       "etiqueta": "Minimalista",
-      "descripcion": "Taza y cuaderno con inicial en rojo + bombones. Estilo limpio.",
+      "descripcion": "Taza y agenda con inicial en rojo + bombones. Estilo limpio.",
       "imagen": "/productos/caja-lucas-rafael.jpg",
       "destacado": false
     },
@@ -101,7 +101,7 @@
       "titulo": "Set Cafecito & Chisme",
       "categoria": "tazas",
       "etiqueta": "Frases",
-      "descripcion": "Cuaderno con frase + taza interior rosa de conchitas. Para regalar amistad.",
+      "descripcion": "Agenda con frase + taza interior rosa de conchitas. Para regalar amistad.",
       "imagen": "/productos/set-cafecito-chisme.jpg",
       "destacado": false
     },
@@ -109,7 +109,7 @@
       "titulo": "Taza Teacher · Corazón manzana",
       "categoria": "tazas",
       "etiqueta": "Interior negro",
-      "descripcion": "Diseño de manzana lettering sobre cerámica de interior de color.",
+      "descripcion": "Diseño de manzana lettering sobre cerámica.",
       "imagen": "/productos/taza-teacher.jpg",
       "destacado": false
     },
@@ -153,27 +153,27 @@
       "fecha": "Mayo 2026",
       "texto": "Abrimos pedidos para boxes de profes y seños. Cupos limitados por temporada.",
       "imagen": "/productos/caja-seno-sheila.jpg",
-      "enlace": "https://instagram.com/mmsublimados"
+      "enlace": "https://instagram.com/"
     },
     {
       "titulo": "Combos para promociones",
       "fecha": "Abril 2026",
       "texto": "Precios especiales por mayor para salones y graduaciones. Pide tu cotización.",
       "imagen": "/productos/tazas-nombres-laura.jpg",
-      "enlace": "https://instagram.com/mmsublimados"
+      "enlace": "https://instagram.com/"
     },
     {
       "titulo": "Nuevo: llaveros de estudio",
       "fecha": "Marzo 2026",
       "texto": "Tabla periódica, fórmulas y verbos de bolsillo. El regalo útil que faltaba.",
       "imagen": "/productos/llaveros-tabla-periodica.jpg",
-      "enlace": "https://instagram.com/mmsublimados"
+      "enlace": "https://instagram.com/"
     }
   ],
 
   "testimonios": [
     { "texto": "La taza de mi mamá quedó idéntica a la foto que mandé. Lloró cuando la abrió.", "autor": "Carla R." },
     { "texto": "Pedí 25 tazas para la promoción y todas llegaron perfectas y a tiempo.", "autor": "Prof. Méndez" },
-    { "texto": "El cuaderno de la pastora fue el regalo del año en la iglesia. Mil gracias.", "autor": "Grupo de damas" }
+    { "texto": "El agenda de la pastora fue el regalo del año en la iglesia. Mil gracias.", "autor": "Grupo de damas" }
   ]
 }
