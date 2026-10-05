@@ -36,7 +36,7 @@ const year = new Date().getFullYear();
     <meta property="og:image" content={marca.logo} />
   </head>
   <body>
-    <!-- ================= NAV ================= -->
+    <!-- NAV -->
     <header class="nav">
       <div class="wrap nav__inner">
         <a href="#inicio" class="nav__brand">
@@ -60,7 +60,7 @@ const year = new Date().getFullYear();
       </div>
     </header>
 
-    <!-- ================= HERO ================= -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="hero__blob" aria-hidden="true"></div>
       <div class="wrap hero__inner">
@@ -121,7 +121,7 @@ const year = new Date().getFullYear();
       </div>
     </section>
 
-    <!-- ================= MARQUEE ================= -->
+    <!-- MARQUEE -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
         {
@@ -135,7 +135,7 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
-    <!-- ================= PRODUCTOS ================= -->
+    <!-- PRODUCTOS -->
     <section id="productos" class="seccion">
       <div class="wrap">
         <header class="seccion__head reveal">
@@ -156,18 +156,6 @@ const year = new Date().getFullYear();
             ))
           }
         </div>
-
-        <!-- Filtros -->
-        <!-- <div class="filtros reveal">
-          <button class="chip is-active" data-filtro="todos">Todos</button>
-          {
-            categorias.map((c) => (
-              <button class="chip" data-filtro={c.id}>
-                {c.titulo}
-              </button>
-            ))
-          }
-        </div> -->
 
         <div class="wrap">
           <header class="seccion__head reveal">
@@ -192,117 +180,35 @@ const year = new Date().getFullYear();
               ))
             }
           </div>
-
-          <!-- Testimonios sobre el mural -->
-          <!-- <div class="testis">
-          {testimonios.map((t) => (
-            <blockquote class="testi reveal">
-              <p class="testi__texto">“{t.texto}”</p>
-              <cite class="testi__autor mano">— {t.autor}</cite>
-            </blockquote>
-          ))}
-        </div> -->
         </div>
-
-        <!-- Grilla -->
-        <!-- <div class="grid " id="grid-productos">
-        {productos.map((p, i) => (
-          <article class="prod reveal" data-cat={p.categoria} style={`--i:${i}`}>
-            <div class="prod__img">
-              <span class="prod__badge mano">{p.etiqueta}</span>
-              <img src={p.imagen} alt={p.titulo} loading="lazy" />
-            </div>
-            <div class="prod__body">
-              <h3 class="prod__title">{p.titulo}</h3>
-              <p class="prod__desc">{p.descripcion}</p>
-              <a
-                href={`https://wa.me/${contacto.whatsapp}?text=${encodeURIComponent('Hola MM, me interesa: ' + p.titulo)}`}
-                target="_blank" rel="noopener" class="prod__link">
-                Lo quiero →
-              </a>
-            </div>
-          </article>
-        ))}
-      </div> -->
       </div>
     </section>
 
-    <!-- ================= GALERIA (collage) ================= -->
-    <!-- <section id="galeria" class="seccion">
-    <div class="wrap">
-      <header class="seccion__head reveal">
-        <span class="kicker kicker--azul">Hechos con cariño</span>
-        <h2 class="seccion__title">El mural de <span class="marca-rojo">pedidos reales</span></h2>
-      </header>
-      <div class="mural">
-        {galeria.map((src, i) => (
-          <figure class={`mural__item reveal mural__item--${(i % 4) + 1}`}>
-            <span class="tape"></span>
-            <img src={src} alt="Trabajo de MM Sublimados" loading="lazy" />
-          </figure>
-        ))}
+    <!-- PROCESO -->
+    <section id="proceso" class="proceso">
+      <div class="wrap">
+        <header class="seccion__head reveal">
+          <span class="kicker">Sin complicaciones</span>
+          <h2 class="seccion__title">
+            Así de fácil es <span class="marca-azul">pedir el tuyo</span>
+          </h2>
+        </header>
+        <ol class="pasos">
+          {
+            proceso.map((p) => (
+              <li class="paso reveal">
+                <span class="paso__num">{p.paso}</span>
+                <h3 class="paso__title">{p.titulo}</h3>
+                <p class="paso__texto">{p.texto}</p>
+              </li>
+            ))
+          }
+        </ol>
       </div>
+    </section>
 
-      <!-- Testimonios sobre el mural -->
-    <!-- <div class="testis">
-        {testimonios.map((t) => (
-          <blockquote class="testi reveal">
-            <p class="testi__texto">“{t.texto}”</p>
-            <cite class="testi__autor mano">— {t.autor}</cite>
-          </blockquote>
-        ))}
-      </div> -->
-  </body>
-</html> -->
-
-<!-- ================= PROCESO ================= -->
-<section id="proceso" class="proceso">
-  <div class="wrap">
-    <header class="seccion__head reveal">
-      <span class="kicker">Sin complicaciones</span>
-      <h2 class="seccion__title">
-        Así de fácil es <span class="marca-azul">pedir el tuyo</span>
-      </h2>
-    </header>
-    <ol class="pasos">
-      {
-        proceso.map((p) => (
-          <li class="paso reveal">
-            <span class="paso__num">{p.paso}</span>
-            <h3 class="paso__title">{p.titulo}</h3>
-            <p class="paso__texto">{p.texto}</p>
-          </li>
-        ))
-      }
-    </ol>
-  </div>
-</section>
-
-<!-- ================= NOVEDADES / PUBLICACIONES ================= -->
-<!-- <section id="novedades" class="novedades">
-    <div class="wrap">
-      <header class="seccion__head reveal">
-        <span class="kicker">Lo último del taller</span>
-        <h2 class="seccion__title">Novedades & <span class="marca-azul">temporadas</span></h2>
-      </header>
-      <div class="posts">
-        {publicaciones.map((post) => (
-          <a href={post.enlace} target="_blank" rel="noopener" class="post reveal">
-            <div class="post__img"><img src={post.imagen} alt={post.titulo} loading="lazy" /></div>
-            <div class="post__body">
-              <span class="post__fecha">{post.fecha}</span>
-              <h3 class="post__title">{post.titulo}</h3>
-              <p class="post__texto">{post.texto}</p>
-              <span class="post__link">Ver más ↗</span>
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section> -->
-
-<!-- ================= CTA / CONTACTO ================= -->
-<section id="contacto" class="cta">
+    <!-- CTA -->
+    <section id="contacto" class="cta">
   <div class="wrap cta__inner">
     <div class="cta__copy reveal">
       <span class="kicker kicker--claro">Empecemos</span>
@@ -342,7 +248,7 @@ const year = new Date().getFullYear();
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="wrap footer__inner">
     <a href="#inicio" class="footer__brand">
@@ -373,7 +279,7 @@ const year = new Date().getFullYear();
 </a>
 
 <style>
-  /* ---------- NAV ---------- */
+  /* NAV */
   .nav {
     position: sticky;
     top: 0;
@@ -436,7 +342,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- HERO ---------- */
+  /* HERO */
   .hero {
     position: relative;
     padding: clamp(3rem, 8vw, 6rem) 0 clamp(3rem, 7vw, 5rem);
@@ -574,7 +480,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- MARQUEE ---------- */
+  /* MARQUEE */
   .marquee {
     background: var(--rojo);
     color: var(--crema-soft);
@@ -599,7 +505,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- SECCIÓN base ---------- */
+  /* SECCIÓN base */
   .seccion {
     padding: clamp(3rem, 7vw, 5.5rem) 0;
   }
@@ -611,7 +517,7 @@ const year = new Date().getFullYear();
     max-width: 18ch;
   }
 
-  /* ---------- CATEGORÍAS ---------- */
+  /* CATEGORÍAS */
   .cats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -655,7 +561,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- FILTROS ---------- */
+  /* FILTROS */
   .filtros {
     display: flex;
     flex-wrap: wrap;
@@ -681,7 +587,7 @@ const year = new Date().getFullYear();
     color: var(--crema-soft);
   }
 
-  /* ---------- GRID PRODUCTOS ---------- */
+  /* GRID PRODUCTOS */
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -773,7 +679,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- PROCESO ---------- */
+  /* PROCESO */
   .proceso {
     background: var(--tinta);
     color: var(--crema-soft);
@@ -823,7 +729,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- MURAL / GALERÍA ---------- */
+  /* MURAL / GALERÍA */
   .mural {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -910,7 +816,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- NOVEDADES ---------- */
+  /* NOVEDADES */
   .novedades {
     padding: clamp(3rem, 7vw, 5.5rem) 0;
   }
@@ -975,7 +881,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- CTA ---------- */
+  /* CTA */
   .cta {
     background: var(--rojo);
     color: var(--crema-soft);
@@ -1058,7 +964,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* ---------- FOOTER ---------- */
+  /* FOOTER */
   .footer {
     background: var(--tinta);
     color: var(--crema-soft);
@@ -1091,7 +997,7 @@ const year = new Date().getFullYear();
     opacity: 0.6;
   }
 
-  /* ---------- WhatsApp flotante ---------- */
+  /* WhatsApp flotante */
   .float-wa {
     position: fixed;
     bottom: 22px;
